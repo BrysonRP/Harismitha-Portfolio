@@ -7,6 +7,12 @@
 (() => {
   'use strict';
 
+  /* ---- Always start at the top on page load/reload ---- */
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
   /* ---- DOM References ---- */
   const html = document.documentElement;
   const navbar = document.getElementById('navbar');
